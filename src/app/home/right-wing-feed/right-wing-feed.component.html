@@ -1,0 +1,13 @@
+<img class="elephant" src="/assets/img/elephant.jpg"/>
+<div class="rightpic">
+<!--<h1 >Right Wing Tweets</h1>-->
+</div>
+<ul>
+    <li *ngFor="let tweet of tweets">
+        <div class ="twitter">
+        <div class="name"><img src="{{tweet.user.profile_image_url}}" class="profilepic"/> {{tweet.user.name}}</div>
+        <div class ="tweet">{{tweet.text}}</div>
+        <div class="created">{{tweet.created_at}}</div>
+        </div>
+    </li>
+</ul>

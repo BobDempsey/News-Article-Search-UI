@@ -1,1 +1,2 @@
-# UCF-Whats-the-Narrative-News-Search-App
+# Whats-The-Narrative
+Final Group Project

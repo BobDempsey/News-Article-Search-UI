@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+my-app {
+  min-height: 100%;
+  width: 100%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.stories-read-full-article{
+    position: relative;
+    left: 20px;
+}
+
+.cd-content {
+    position: relative;
+    min-height: 100%;
+}
+
+.cd-title {
+    position: relative;
+    background-color: #333545;
+    position: relative;
+    top: 70px;
+}
+
+.cd-section{
+    position: relative;
+    width: 100%;
+}
+
+.home-text {
+  position: relative;
+  top: -5px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="cd-title no-border">
+
+        <img class="logo-desktop home-image" src="assets/img/WTNh100.png" />
+        <img class="logo-mobile home-image" src="assets/img/WTNh80.png" />
+
+        <h2 class="dark-text home-text">Sign Up</h2>
+    </div>
+
+
+    <div class="cd-content cd-content-less-padding">
+        <div class="text-center">
+
+            
+
+            <div class="col-sm-offset-5 col-sm-2">
+
+
+                <!--(keyup.enter)="doLogin(user, pass)"-->
+                <div *ngFor="let quiz of _quiz | slice:(questionIndex-1):questionIndex">
+                <div class="text-center"><p class="copy-p thank-you">Welcome to What's The Narrative?! Please complete these quick questions.</p></div>
+                    <div class="question-index">Question {{ questionIndex }} / {{ _quiz.length }}</div>
+                    <p class="question">{{ quiz.question }}</p>
+                    <div [class]="'option option-' + i" *ngFor="let option of quiz.options; let i = index" (click)="selected(elem)" #elem>{{ option }}</div>
+                    <br>
+                </div>
+                <br>
+                <div class="navigation" (click)="nextQuestion()">
+                    <!--<button  *ngIf="questionIndex < (_quiz?.length - 1)" (click)="previousQuestion()" >Previous Question</button>-->
+                    <button *ngIf="questionIndex < 11">Next Question</button>
+                    <button *ngIf="questionIndex === 11">Finish Quiz</button>
+                </div>
+                <div *ngIf="quizAnswer !== ''">
+                <div class="text-center"><p class="copy-p thank-you">Thanks for completing the questions. Please choose a name and password to login.</p></div>
+                    <input class="register-name" [(ngModel)]="username" type="text" placeholder="Your Name" required>
+                    <input class="register-password" [(ngModel)]="pass" type="text" placeholder="Your Password" required>
+                    <br>
+                    <button class="btn-primary btn-more-padding" (click)="doLogin(username, pass)">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
