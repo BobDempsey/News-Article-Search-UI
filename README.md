@@ -1,2 +1,3 @@
 # Whats-The-Narrative
-Final Group Project
+
+A complete UI for our news article search app. (App no longer functions)
